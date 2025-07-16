@@ -19,10 +19,49 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
-    <title>Splash </title>
+    <title>Mental Health </title>
 </head>
 
 <body>
+
+    <!-- ===== Header ===== -->
+    <header class="">
+        <a href="#"
+            class="absolute top-16 left-1/2 transform -translate-x-1/2 text-2xl tracking-wide font-semibold text-white uppercase">Mental
+            Health</a>
+        <div class="fixed top-16 right-20 ">
+            <button id="menu-btn" class="ml-auto block text-xl tracking-widest font-bold text-white uppercase mb-4 ">
+                Menu
+                <img src=" images/menuArrow.svg" alt="Menu Icon" class="inline-block rotate-90 -top-0.5 relative w-5">
+            </button>
+            <nav id="nav-popup" class="nav-popup shadow-lg w-[400px] max-w-full rounded-lg">
+                <ul class="flex flex-col justify-center items-end gap-2 h-full pr-5" id="nav-links">
+                    <h2
+                        class="text-center text-8xl font-normal text-White uppercase drop-shadow-sm tracking-tight opacity-10 relative z-0">
+                        pages</h2>
+                    <li><a href="#home" class="nav-link text-white text-lg tracking-[2px] font-bold uppercase">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            class="nav-link text-white text-lg tracking-[2px] font-bold uppercase">About</a></li>
+                    <li><a href="#services"
+                            class="nav-link text-white text-lg tracking-[2px] font-bold uppercase">Services</a></li>
+                    <li><a href="#contact"
+                            class="nav-link text-white text-lg tracking-[2px] font-bold uppercase">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==== Hero Section ===== -->
+
+    <section id="home" class="hero bg-cover bg-center h-screen flex items-center justify-center"
+        style="background-image: url('images/hero-bg.jpg');">
+        <div class="absolute top-1/2 left-1/4 transform -translate-y-1/2 text-white max-w-md text-right">
+            <h1 class="text-8xl font-normal tracking-tight ">Your Mental Wellbeing Matters</h1>
+            <a href="#about" class="custom-btn mt-10 text-white font-semibold py-4 px-6 rounded-full ml-auto">Get
+                Started</a>
+        </div>
+    </section>
 
     <!-- Custom JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
