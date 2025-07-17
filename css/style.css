@@ -83,21 +83,14 @@ h6 {
 }
 
 /* ===== Custom Button ===== */
+
+button:focus,
+button:active,
+button:focus-visible {
+    outline: none;
+}
+
 .custom-btn {
-    background-image: linear-gradient(45deg,
-            hsl(250deg 89% 78%) 0%,
-            hsl(250deg 90% 79%) 8%,
-            hsl(251deg 91% 80%) 17%,
-            hsl(251deg 91% 81%) 25%,
-            hsl(251deg 92% 81%) 33%,
-            hsl(251deg 93% 82%) 42%,
-            hsl(251deg 94% 83%) 50%,
-            hsl(251deg 94% 84%) 58%,
-            hsl(251deg 95% 85%) 67%,
-            hsl(251deg 96% 86%) 75%,
-            hsl(252deg 97% 86%) 83%,
-            hsl(252deg 99% 87%) 92%,
-            hsl(252deg 100% 88%) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,27 +98,30 @@ h6 {
     min-width: 250px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    transition: background-image 1s ease-in-out,
+    box-shadow: 0 3px 0 rgb(255, 255, 255);
+    transition: box-shadow .5s ease-in-out,
         transform 0.3s ease-in-out;
 }
 
 .custom-btn:hover {
-    transform: scale(1.05);
-    background-image: linear-gradient(225deg,
-            hsl(250deg 89% 78%) 0%,
-            hsl(250deg 90% 79%) 8%,
-            hsl(251deg 91% 80%) 17%,
-            hsl(251deg 91% 81%) 25%,
-            hsl(251deg 92% 81%) 33%,
-            hsl(251deg 93% 82%) 42%,
-            hsl(251deg 94% 83%) 50%,
-            hsl(251deg 94% 84%) 58%,
-            hsl(251deg 95% 85%) 67%,
-            hsl(251deg 96% 86%) 75%,
-            hsl(252deg 97% 86%) 83%,
-            hsl(252deg 99% 87%) 92%,
-            hsl(252deg 100% 88%) 100%);
+    box-shadow: 0px 0px 0 3px rgb(255, 255, 255);
+    /* box-shadow: 0px -5px 0 0 rgba(255, 255, 255, 0.2); */
 }
+
+@keyframes slowRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.menu-icon {
+    animation: slowRotate 2s linear infinite;
+}
+
 
 /* ===== Section ===== */
 
@@ -136,13 +132,16 @@ section {
 .nav-popup {
     height: 0;
     overflow: hidden;
-    background-image: linear-gradient(30deg,
-            hsl(250deg 89% 78%) 0%,
-            hsl(250deg 90% 79%) 15%,
-            hsl(251deg 92% 81%) 29%,
-            hsl(251deg 93% 82%) 44%,
-            hsl(251deg 94% 84%) 58%,
-            hsl(251deg 96% 85%) 72%,
-            hsl(251deg 98% 86%) 86%,
-            hsl(252deg 100% 88%) 100%);
+    /* background-image: linear-gradient(30deg,
+
+            hsl(237deg 59% 29%) 14%,
+            hsl(246deg 37% 48%) 29%,
+            hsl(249deg 60% 68%) 43%,
+            hsl(249deg 60% 68%) 58%,
+            hsl(246deg 37% 48%) 72%,
+            hsl(237deg 59% 29%) 86%); */
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
