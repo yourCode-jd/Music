@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Rubik Glitch", system-ui;
+    font-family: "Orbitron", sans-serif;
 }
 
 html {
@@ -28,8 +28,7 @@ body {
             hsl(0deg 0% 0%) 100%);
     overflow-x: hidden;
     color: #fff;
-    font-family: "Open Sans",
-        sans-serif;
+    font-family: "Orbitron", sans-serif;
     background-repeat: no-repeat;
 }
 
@@ -59,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Rubik Glitch", system-ui;
     color: #ffffff;
     letter-spacing: normal;
     font-weight: 700;
