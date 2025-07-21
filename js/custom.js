@@ -67,17 +67,17 @@ links.forEach((link) => {
 gsap.from("header a", {
   opacity: 0,
   y: -30,
-  duration: 1,
+  duration: 2,
   ease: "power3.out",
-  delay: 0.2,
+  delay: 0.6,
 });
 
 gsap.from("#menu-btn", {
   opacity: 0,
-  y: -30,
-  duration: 1,
+  y: 30,
+  duration: 3,
   ease: "power3.out",
-  delay: 0.4,
+  delay: 1.5,
 });
 
 // Animate hero section on page load
@@ -95,7 +95,7 @@ tl.from(
   ".hero-title .word",
   {
     opacity: 0,
-    y: 50,
+    x: 120,
     duration: 2,
     stagger: 0.6,
   },
@@ -109,7 +109,7 @@ tl.from(
       y: 50,
       duration: 0.6,
     },
-    "-=0.3"
+    "-=0.4"
   ); // starts slightly
 
 // Feature section animation
