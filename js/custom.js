@@ -124,7 +124,138 @@ gsap.from(".track-card", {
   stagger: 0.2,
   scrollTrigger: {
     trigger: "#tracks", // ID of the section
-    start: "top 10%", // When 80% into viewport
+    start: "top 40%", // When 80% into viewport
     toggleActions: "play none none none",
   },
 });
+
+// ===== genre-card section ===== //
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".genre-card", {
+  scrollTrigger: {
+    trigger: "#genres",
+    start: "top 80%",
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  scale: 1,
+  rotateY: 15,
+  duration: 1.2,
+  stagger: 0.25,
+  ease: "back.out(1.7)",
+});
+
+// ===== artist section ===== //
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".artist-card", {
+  scrollTrigger: {
+    trigger: "#trending",
+    start: "top 80%",
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  scale: 0,
+  rotate: 10,
+  filter: "blur(8px)",
+  duration: 1,
+  stagger: 0.25,
+  ease: "elastic.out(1, 0.5)",
+  onUpdate: function () {
+    gsap.set(".artist-card", { filter: "blur(0px)" });
+  },
+});
+
+// ===== Testimonials section ===== //
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from("#testimonials .testimonial-wrapper", {
+  scrollTrigger: {
+    trigger: "#testimonials",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  ease: "power3.out",
+});
+
+const testimonials = document.querySelectorAll(".testimonial");
+let currentIndex = 0;
+
+function showTestimonial(index) {
+  testimonials.forEach((el, i) => {
+    if (i === index) {
+      gsap.to(el, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+    } else {
+      gsap.to(el, {
+        autoAlpha: 0,
+        y: 30,
+        duration: 0.6,
+        ease: "power2.in",
+      });
+    }
+  });
+}
+
+showTestimonial(currentIndex);
+
+document.getElementById("nextTestimonial").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  showTestimonial(currentIndex);
+});
+
+document.getElementById("prevTestimonial").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentIndex);
+});
+
+// ===== Newsletter section ===== //
+
+gsap.registerPlugin(ScrollTrigger);
+
+const newsletterTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#newsletter",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+  },
+});
+
+newsletterTimeline
+  .from("#newsletter h2", {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  })
+  .from(
+    "#newsletter p",
+    {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+    },
+    "-=0.6"
+  )
+  .from(
+    "#newsletter form",
+    {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+    },
+    "-=0.5"
+  );

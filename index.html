@@ -19,8 +19,7 @@
     <title>Music </title>
 </head>
 
-<body style="background-image: url('images/hero-bg.jpg')"
-    class="bg-cover bg-top bg-no-repeat :before:content-[''] before:fixed before:inset-0 before:bg-[#1e2376]/20 before:-z-10">
+<body class="">
     <div class="floating-img">
         <!-- <img class="w-5" src="images/music.svg" alt="Background Image">
         <img class="w-5" src="images/musicbar.svg" alt="Hero Image"> -->
@@ -28,7 +27,7 @@
 
     <!-- ===== Header ===== -->
     <header>
-        <img class="shaking-img w-5 absolute top-8 left-10" src="images/music.svg" alt="Background Image">
+        <img class="shaking-img w-7 absolute top-8 left-10" src="images/music.svg" alt="Background Image">
         <a href="#"
             class="absolute top-10 left-1/2 transform -translate-x-1/2 text-2xl tracking-tight font-light text-white uppercase">
             A U D I O
@@ -43,7 +42,7 @@
             <nav id="nav-popup" class="nav-popup shadow-lg w-[400px] max-w-full rounded-lg">
                 <ul class="flex flex-col justify-center items-end gap-2 h-full pr-5" id="nav-links">
                     <h2
-                        class="-mt-12 text-center text-8xl font-normal text-White uppercase drop-shadow-sm tracking-tight opacity-5 relative z-0">
+                        class="-mt-12 text-center text-7xl font-normal text-White uppercase drop-shadow-sm tracking-tight opacity-5 relative z-0">
                         pages</h2>
                     <li><a href="#home" class="nav-link text-white text-lg tracking-[2px] font-bold uppercase">Home</a>
                     </li>
@@ -60,7 +59,8 @@
 
     <!-- ==== Hero Section ===== -->
 
-    <section id="home" class="p-0 hero ">
+    <section id="home" class="h-screen p-0 hero bg-cover bg-top bg-no-repeat"
+        style="background-image: url('images/hero-bg2.jpg')">
         <!-- <img src="images/hero-bg.png" alt="Hero Image"
             class="absolute top-1/2 left-1/4 transform -translate-y-1/2  z-10"> -->
         <div class="max-w-md ml-[25%]">
@@ -75,75 +75,217 @@
 
     <!-- ==== Features Section ===== -->
 
-    <section id="tracks" class="py-20 h-screen">
-        <div class="container mx-auto text-center">
-            <!-- <h2 class="text-6xl font-light mb-10 uppercase tracking-wider">Latest Releases</h2> -->
-            <div class="grid grid-cols-1 gap-10">
-                <!-- Repeat this block -->
-                <div class="track-card relative">
+    <section id="tracks" class="h-[105vh] bg-cover bg-center" style="background-image: url('images/a5.jpg');">
+        <div class="grid grid-cols-4 gap-10 items-center h-full">
+            <!-- Repeat this block -->
+            <div class="track-card relative">
 
-                </div>
-                <div class="track-card relative">
-                    <div class="h-[650px]">
-                        <img src="images/toper.jpg" alt="Album Cover"
-                            class="w-full rounded-lg h-full object-cover mb-4 shadow-lg object-center opacity-50">
-                    </div>
-                    <div class="absolute bottom-10 w-[90%] left-1/2 -translate-x-1/2 ">
-                        <p class="text-2xl font-semibold mb-1">Track Title</p>
-                        <p class="text-base text-gray-400">Artist Name</p>
-                        <audio controls class="mt-5 w-full opacity-50">
-                            <source src="audio/track1.mp3" type="audio/mp3">
-                        </audio>
-                    </div>
-                </div>
-
-                <div class="track-card relative">
-
-                </div>
-                <!-- /Repeat -->
             </div>
+            <div class="track-card relative bg-white/10 bg-opacity-50 backdrop-blur-sm shadow-2xl">
+                <div class="h-[550px] text-center">
+                    <img src="images/music.svg" alt="Album Cover" class="animate-bounce w-96 max-w-full mx-auto">
+                </div>
+                <div class="absolute bottom-10 w-[90%] left-1/2 -translate-x-1/2  text-center">
+                    <p class="text-2xl font-semibold mb-1">Track Title</p>
+                    <p class="text-base text-white/80">Artist Name</p>
+                    <audio controls class="mt-5 w-full opacity-50">
+                        <source src="audio/track1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+
+            <div class="track-card relative bg-white/10 bg-opacity-50 backdrop-blur-sm shadow-2xl">
+                <div class="h-[550px]">
+                    <img src="images/music.svg" alt="Album Cover" class="animate-bounce w-96 max-w-full mx-auto">
+                </div>
+                <div class="absolute bottom-10 w-[90%] left-1/2 -translate-x-1/2 text-center ">
+                    <p class="text-2xl font-semibold mb-1">Track Title</p>
+                    <p class="text-base text-white/80">Artist Name</p>
+                    <audio controls class="mt-5 w-full opacity-50">
+                        <source src="audio/track1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+
+            <div class="track-card relative">
+
+            </div>
+            <!-- /Repeat -->
         </div>
     </section>
 
-
     <!-- ==== Genres Section ===== -->
-    <section id="genres" class="py-24 ">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-12 tracking-wide uppercase">Genres You Love</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <section id="genres" class=" h-[110vh]">
+        <div class="flex flex-col items-center h-full justify-center">
+            <h2 class="text-5xl font-bold mb-20 tracking-wide uppercase">Genres You Love</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 h-[480px] items-center w-[90%] max-w-full">
 
                 <!-- Genre Card -->
                 <div
-                    class="genre-card group relative p-6 rounded-xl bg-black hover:scale-105 transition-transform cursor-pointer h-64 flex flex-col bg-opacity-20 backdrop-blur-sm justify-center">
-                    <h3 class="text-4xl font-semibold">Lo-Fi</h3>
-                    <p class="text-sm text-gray-300 mt-3 tracking-widest">Chill beats, rainy nights</p>
+                    class="genre-card group relative p-6 rounded-xl bg-white hover:scale-105 transition-transform cursor-pointer h-full flex items-center gap-6 bg-opacity-5 backdrop-blur-sm justify-center hover:bg-gradient-to-t from-black/10 to-white/10 ">
+                    <img src="images/music.svg" class="w-16 animate-bounce" />
+                    <div class="text-left">
+                        <h3 class="text-4xl font-semibold">Lo-Fi</h3>
+                        <p class="text-sm text-white/80 mt-3 tracking-widest">Chill beats, rainy nights</p>
+                    </div>
+                </div>
+                <div
+                    class="genre-card row-span-2 overflow-hidden h-[480px] rounded-xl group hover:mix-blend-luminosity">
+                    <img src="images/toper.jpg" alt="Artist" class="w-full h-full object-cover " />
+                </div>
+                <div
+                    class="genre-card group relative p-6 rounded-xl bg-white hover:scale-105 transition-transform cursor-pointer h-full flex items-center gap-6 bg-opacity-5 backdrop-blur-sm justify-center hover:bg-gradient-to-t from-black/10 to-white/10">
+                    <img src="images/music.svg" class="w-16 animate-bounce" />
+                    <div class="text-left">
+                        <h3 class="text-4xl font-semibold">Synthwave</h3>
+                        <p class="text-sm text-white/80 mt-3 tracking-widest">Retro-futuristic vibes</p>
+                    </div>
                 </div>
 
                 <div
-                    class="genre-card group relative p-6 rounded-xl bg-black hover:scale-105 transition-transform cursor-pointer h-64 flex flex-col bg-opacity-20 backdrop-blur-sm justify-center">
-                    <h3 class="text-4xl font-semibold">Synthwave</h3>
-                    <p class="text-sm text-gray-300 mt-3 tracking-widest">Retro-futuristic vibes</p>
+                    class="genre-card group relative p-6 rounded-xl bg-white hover:scale-105 transition-transform cursor-pointer h-full flex items-center gap-6 bg-opacity-5 backdrop-blur-sm justify-center hover:bg-gradient-to-t from-black/10 to-white/10">
+                    <img src="images/music.svg" class="w-16 animate-bounce" />
+                    <div class="text-left">
+                        <h3 class="text-4xl font-semibold">Indie Rock</h3>
+                        <p class="text-sm text-white/80 mt-3 tracking-widest">Guitar-led soundscapes</p>
+                    </div>
                 </div>
-
                 <div
-                    class="genre-card group relative p-6 rounded-xl bg-black hover:scale-105 transition-transform cursor-pointer h-64 flex flex-col bg-opacity-20 backdrop-blur-sm justify-center">
-                    <h3 class="text-4xl font-semibold">Indie Rock</h3>
-                    <p class="text-sm text-gray-300 mt-3 tracking-widest">Guitar-led soundscapes</p>
-                </div>
+                    class="genre-card group relative p-6 rounded-xl bg-white hover:scale-105 transition-transform cursor-pointer h-full flex items-center gap-6 bg-opacity-5 backdrop-blur-sm justify-center hover:bg-gradient-to-t from-black/10 to-white/10">
+                    <img src="images/music.svg" class="w-16 animate-bounce" />
+                    <div class="text-left">
+                        <h3 class="text-4xl font-semibold">Ambient</h3>
+                        <p class="text-sm text-white/80 mt-3 tracking-widest">Atmospheres & meditation</p>
+                    </div>
 
-                <div
-                    class="genre-card group relative p-6 rounded-xl bg-black hover:scale-105 transition-transform cursor-pointer h-64 flex flex-col bg-opacity-20 backdrop-blur-sm justify-center">
-                    <h3 class="text-4xl font-semibold">Ambient</h3>
-                    <p class="text-sm text-gray-300 mt-3 tracking-widest">Atmospheres & meditation</p>
+                    <!-- Add more genres if needed -->
                 </div>
-
-                <!-- Add more genres if needed -->
             </div>
+    </section>
+
+    <!-- ==== Trending Artists Section ===== -->
+
+    <section id="trending" class="bgGradient h-[110vh]">
+        <div class="flex flex-col items-center h-full justify-center">
+            <h2 class="text-5xl font-bold mb-24 tracking-wide uppercase text-center">Trending Artists</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-[90%] max-w-full">
+
+                <!-- Artist Card -->
+                <div class="artist-card text-center group">
+                    <img src="images/a1.jpg" alt="Artist"
+                        class="h-[420px] mx-auto rounded-md group-hover:-skew-x-6 hover:scale-110 transition-transform duration-300 object-contain" />
+                    <h3 class="text-xl font-medium mt-6 tracking-widest">Eli Moon</h3>
+                    <p class="text-sm text-white/80 mt-3">Lo-Fi / Chillhop</p>
+                </div>
+
+                <div class="artist-card text-center group">
+                    <img src="images/a4.jpg" alt="Artist"
+                        class="h-[420px] mx-auto rounded-md group-hover:skew-x-6 hover:scale-110 transition-transform duration-300 object-contain" />
+                    <h3 class="text-xl font-medium mt-6 tracking-widest">NightDrive</h3>
+                    <p class="text-sm text-white/80 mt-3">Synthwave</p>
+                </div>
+
+                <div class="artist-card text-center group">
+                    <img src="images/a3.jpg" alt="Artist"
+                        class="h-[420px] mx-auto rounded-md group-hover:-skew-x-6 hover:scale-110 transition-transform duration-300 object-contain" />
+                    <h3 class="text-xl font-medium mt-6 tracking-widest">Indigo Child</h3>
+                    <p class="text-sm text-white/80 mt-3">Indie Rock</p>
+                </div>
+
+                <div class="artist-card text-center group">
+                    <img src="images/a5.jpg" alt="Artist"
+                        class="h-[420px] mx-auto rounded-md group-hover:skew-x-6 hover:scale-110 transition-transform duration-300 object-contain" />
+                    <h3 class="text-xl font-medium mt-6 tracking-widest">ZenAura</h3>
+                    <p class="text-sm text-white/80 mt-3">Ambient</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Testimonials Section ===== -->
+
+    <section id="testimonials" class="bgGradient text-center h-[110vh] overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
+            <div class="relative">
+                <h2 class="text-5xl font-bold mb-6 tracking-wide uppercase">What Listeners Say</h2>
+
+                <div class="relative overflow-hidden w-3/4 mx-auto">
+                    <div class="testimonial-wrapper relative h-60 flex items-center ">
+                        <div class="bg-cover bg-center testimonial absolute w-full opacity-0 shadow-lg bg-white/5 p-10 py-16 rounded-lg"
+                            data-index="0">
+                            <p class="text-xl mb-4 tracking-wider">“This app is a daily part of my routine now. The
+                                playlists are so
+                                well-curated!”</p>
+                            <span class="text-sm text-gray-400">— Alex J., Designer</span>
+                        </div>
+
+                        <div class=" bg-cover bg-center testimonial absolute w-full opacity-0 shadow-lg bg-white/5 p-10 py-16 rounded-lg"
+                            data-index="1">
+                            <p class="text-xl mb-4 tracking-wider">“The ambient section helps me focus during work.
+                                Highly
+                                recommend it!”
+                            </p>
+                            <span class="text-sm text-gray-400">— Maya L., Developer</span>
+                        </div>
+
+                        <div class=" bg-cover bg-center testimonial absolute w-full opacity-0 shadow-lg bg-white/5 p-10 py-16 rounded-lg"
+                            data-index="2">
+                            <p class="text-xl mb-4 tracking-wider">“Love the clean UI and genres layout. I’m always
+                                discovering something
+                                new.”</p>
+                            <span class="text-sm text-gray-400">— Daniel K., Music Blogger</span>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="mt-8 flex justify-center gap-4">
+                        <button id="prevTestimonial"
+                            class="px-4 py-2 bg-white/10 hover:bg-white/50 rounded">Prev</button>
+                        <button id="nextTestimonial"
+                            class="px-4 py-2 bg-white/10 hover:bg-white/50 rounded">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden">
+                <img src="images/toper.jpg" class="w-full h-full" />
+            </div>
+
         </div>
     </section>
 
 
 
+    <!-- ==== Newsletter ==== -->
+
+    <section id="newsletter" class="bgGradient h-screen ">
+        <div class="text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="h-screen overflow-hidden">
+                    <img class="w-full" src="images/a2.jpg" alt="Hero Image">
+                </div>
+                <div class="flex flex-col items-center justify-center h-screen z-10 relative max-w-screen-md mx-auto">
+                    <!-- <div class=" bg-black bg-opacity-5 backdrop-blur-sm w-full h-full absolute "></div> -->
+                    <h2 class="text-6xl font-bold mb-6 uppercase tracking-wide">Stay Updated</h2>
+                    <p class="mb-8 text-lg max-w-xl mx-auto">Subscribe to our newsletter and get the latest music
+                        drops
+                        and
+                        exclusive
+                        content.
+                    </p>
+
+                    <form id="newsletterForm" class="flex flex-col sm:flex-row justify-center gap-4 w-1/2 max-w-full">
+                        <input type="email" placeholder="Enter your email" required
+                            class="px-4 py-3 rounded-md text-[#333] flex-grow focus:outline-none" />
+                        <button type="submit"
+                            class="bg-white/10 text-white font-semibold px-6 py-3 rounded-md hover:bg-white/20 transition">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

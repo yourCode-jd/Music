@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-    background-image: linear-gradient(30deg,
+    /* background-image: linear-gradient(30deg,
             hsl(0deg 0% 0%) 0%,
             hsl(237deg 59% 29%) 14%,
             hsl(246deg 37% 48%) 29%,
@@ -24,7 +24,8 @@ body {
             hsl(249deg 60% 68%) 58%,
             hsl(246deg 37% 48%) 72%,
             hsl(237deg 59% 29%) 86%,
-            hsl(0deg 0% 0%) 100%);
+            hsl(0deg 0% 0%) 100%); */
+    background-color: black;
     overflow-x: hidden;
     color: #fff;
     font-family: "Orbitron", sans-serif;
@@ -122,10 +123,11 @@ button:focus-visible {
 
 
 /* ===== Section ===== */
-
-section {
-    padding: 100px 0;
+/* .bgGradient {
+    background-image: linear-gradient(30deg, hsl(0deg 0% 0%) 0%, hsl(237deg 59% 29%) 14%, hsl(246deg 37% 48%) 29%, hsl(249deg 60% 68%) 43%, hsl(249deg 60% 68%) 58%, hsl(246deg 37% 48%) 72%, hsl(237deg 59% 29%) 86%, hsl(0deg 0% 0%) 100%);
 }
+
+*/
 
 .nav-popup {
     height: 0;
