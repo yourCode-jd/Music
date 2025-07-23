@@ -33,7 +33,7 @@
             A U D I O
             Q U
             E S T</a>
-        <div class="fixed top-10 right-20 z-20 ">
+        <div class="fixed top-10 right-2 md:right-20 z-20 w-full">
             <button id="menu-btn"
                 class="group ml-auto block text-xl tracking-widest font-light text-white uppercase mb-4 ">Menu <img
                     src=" assets/images/menuArrow.svg" alt="Menu Icon"
@@ -63,9 +63,9 @@
         style="background-image: url('assets/images/hero-bg2.jpg')">
         <!-- <img src="assets/images/hero-bg.png" alt="Hero Image"
             class="absolute top-1/2 left-1/4 transform -translate-y-1/2  z-10"> -->
-        <div class="max-w-md ml-[25%]">
+        <div class="md:max-w-md md:ml-[25%]">
             <div class="h-screen flex flex-col items-center justify-center text-right">
-                <h1 class="hero-title text-7xl font-normal tracking-wider">Uncover Your Next Obsession</h1>
+                <h1 class="hero-title text-6xl md:text-7xl font-normal tracking-wider">Uncover Your Next Obsession</h1>
                 <a href="#about" class="flex custom-btn text-white font-semibold py-4 px-6 rounded-full ml-auto">
                     <img src="assets/images/music.svg" alt="Music Icon" class="w-5 mr-2 animate-bounce"> Explore
                     Music</a>
@@ -75,8 +75,8 @@
 
     <!-- ==== Features Section ===== -->
 
-    <section id="tracks" class="h-[105vh] bg-cover bg-center" style="background-image: url('assets/images/a5.jpg');">
-        <div class="grid grid-cols-4 gap-10 items-center h-full">
+    <section id="tracks" class="md:h-[105vh] bg-cover bg-center" style="background-image: url('assets/images/a5.jpg');">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-center h-full">
             <!-- Repeat this block -->
             <div class="track-card relative">
 
@@ -115,10 +115,10 @@
     </section>
 
     <!-- ==== Genres Section ===== -->
-    <section id="genres" class=" h-[110vh]">
+    <section id="genres" class=" md:h-[110vh] py-10 md:py-0">
         <div class="flex flex-col items-center h-full justify-center">
             <h2 class="text-5xl font-bold mb-20 tracking-wide uppercase">Genres You Love</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 h-[480px] items-center w-[90%] max-w-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:h-[480px] items-center w-[90%] max-w-full">
 
                 <!-- Genre Card -->
                 <div
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div
-                    class="genre-card row-span-2 overflow-hidden h-[480px] rounded-xl group hover:mix-blend-luminosity">
+                    class="absolute w-[90%] md:w-auto left-1/2 md:left-inset transform md:transform-unset -translate-x-1/2 md:-translate-unset opacity-20 md:opacity-100 -z-10 md:relative genre-card order-1 md:row-span-2 overflow-hidden h-[480px] rounded-xl group hover:mix-blend-luminosity">
                     <img src="assets/images/toper.jpg" alt="Artist" class="w-full h-full object-cover " />
                 </div>
                 <div
@@ -165,9 +165,9 @@
 
     <!-- ==== Trending Artists Section ===== -->
 
-    <section id="trending" class="bgGradient h-[110vh]">
+    <section id="trending" class="bgGradient md:h-[110vh] py-10 md:py-0">
         <div class="flex flex-col items-center h-full justify-center">
-            <h2 class="text-5xl font-bold mb-24 tracking-wide uppercase text-center">Trending Artists</h2>
+            <h2 class="text-5xl font-bold mb-16 md:mb-24 tracking-wide uppercase text-center">Trending Artists</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-[90%] max-w-full">
 
                 <!-- Artist Card -->
@@ -205,8 +205,8 @@
 
     <!-- ==== Testimonials Section ===== -->
 
-    <section id="testimonials" class="bgGradient text-center h-[110vh] overflow-hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
+    <section id="testimonials" class="bgGradient text-center md:h-[110vh] overflow-hidden py-32 md:py-0 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full ">
             <div class="relative">
                 <h2 class="text-5xl font-bold mb-6 tracking-wide uppercase">What Listeners Say</h2>
 
@@ -247,7 +247,7 @@
                     </div>
                 </div>
             </div>
-            <div class="overflow-hidden">
+            <div class="overflow-hidden absolute md:relative -z-10 opacity-20 md:opacity-100">
                 <img src="assets/images/toper.jpg" class="w-full h-full" />
             </div>
 
@@ -259,10 +259,11 @@
     <section id="newsletter" class="bgGradient h-screen ">
         <div class="text-center">
             <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="h-screen overflow-hidden">
+                <div class="h-screen overflow-hidden ">
                     <img class="w-full" src="assets/images/a2.jpg" alt="Hero Image">
                 </div>
-                <div class="flex flex-col items-center justify-center h-screen z-10 relative max-w-screen-md mx-auto">
+                <div
+                    class="flex flex-col items-center justify-center h-screen z-10 max-w-screen-md mx-auto absolute md:relative left-1/2 md:left-inset transform md:transform-unset -translate-x-1/2 md:-translate-unset">
                     <!-- <div class=" bg-black bg-opacity-5 backdrop-blur-sm w-full h-full absolute "></div> -->
                     <h2 class="text-6xl font-bold mb-6 uppercase tracking-wide">Stay Updated</h2>
                     <p class="mb-8 text-lg max-w-xl mx-auto">Subscribe to our newsletter and get the latest music
