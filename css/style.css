@@ -140,7 +140,7 @@ button:focus-visible {
             hsl(249deg 60% 68%) 58%,
             hsl(246deg 37% 48%) 72%,
             hsl(237deg 59% 29%) 86%); */
-    background-image: url('../images/hero-bg.jpg');
+    background-image: url('../assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
