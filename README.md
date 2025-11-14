@@ -8,7 +8,7 @@ A visually rich landing page that highlights albums, tour dates, and email captu
 
 ## 🚀 Github Demo
 
-[View Here](https://yourcode-jd.github.io/AI/)
+[View Here](https://yourcode-jd.github.io/Music/)
 
 ---
 
